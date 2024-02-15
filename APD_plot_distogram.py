@@ -1,4 +1,4 @@
-#This python script is made for plot distogram from Alphapulldown 1.0.4 outputs. It's a modification of AlphaFold plot distogram script #create by Claudio Mirabello at https://github.com/clami66/dgram2dmap
+#This python script is made for plot distogram from AlphaPulldown 1.0.4 outputs. It's a modification of AlphaFold plot distogram script #create by Claudio Mirabello at https://github.com/clami66/dgram2dmap
 
 
 import glob
