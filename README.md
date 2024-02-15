@@ -17,4 +17,4 @@ Generate Distogram :
 	
 	-necessary file :
 		$Pickle_name.pkl
-		result_*.pkl
+		result_*.pkl		(file need to be gunzip)
