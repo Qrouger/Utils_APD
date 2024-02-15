@@ -1,4 +1,4 @@
-#This python script is made for plot MSA with coverage, LDDT and PAE from Alphapulldown 1.0.4 outputs. It's a modification of a Alphafold #plot script create by Sébastien Lemal. https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
+#This python script is made for plot MSA with coverage, LDDT and PAE from AlphaPulldown 1.0.4 outputs. It's a modification of a Alphafold #plot script create by Sébastien Lemal. https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
 import os
 import glob
 import pickle
