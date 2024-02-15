@@ -10,6 +10,7 @@ Generate MSA-plot :
 		ranking_debug.json
 
 Generate Distogram :
+
 	-Use plot_distogram.py
 		python plot_distogram.py $Path --pickle_name $Pickle_name --plot
 	
