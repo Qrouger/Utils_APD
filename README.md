@@ -21,4 +21,4 @@ Generate Distogram :
 
 
 
-These scripts probably don't work with mmseqs2 outputs.
+These scripts probably don't work with AlphaPulldown mmseqs2 outputs.
