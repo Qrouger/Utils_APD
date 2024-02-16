@@ -18,3 +18,7 @@ Generate Distogram :
 	-necessary file :
 		$Pickle_name.pkl
 		result_*.pkl		(file need to be gunzip)
+
+
+
+These scripts probably don't work with mmseqs2 outputs.
