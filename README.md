@@ -8,6 +8,7 @@ Generate MSA-plot :
 		result_model_multimer_v2_pred_{num}.pkl for multimer
 		result_model_ptm_pred_{num}.pkl
 		ranking_debug.json
+more information : https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
 
 Generate Distogram :
 
@@ -18,7 +19,6 @@ Generate Distogram :
 	-necessary file :
 		$Pickle_name.pkl
 		result_*.pkl		(file need to be gunzip)
-
 more information : https://github.com/clami66/dgram2dmap
 
 
