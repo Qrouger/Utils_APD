@@ -19,5 +19,6 @@ Generate Distogram :
 		$Pickle_name.pkl
 		result_*.pkl		(file need to be gunzip)
 
+more information : https://github.com/clami66/dgram2dmap
 
 
