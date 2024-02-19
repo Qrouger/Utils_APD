@@ -3,7 +3,7 @@ Generate MSA-plot :
 	-Use APD_plot_prediction_quality.py
 		python APD_plot_prediction_quality.py
 
-	-necessary file :
+	-Necessary file :
 		$Pickle_name.pkl
 		result_model_multimer_v2_pred_{num}.pkl for multimer
 		result_model_ptm_pred_{num}.pkl
@@ -16,9 +16,14 @@ Generate Distogram :
 		python plot_distogram.py $Path --pickle_name $Pickle_name --plot
 	
 	
-	-necessary file :
+	-Necessary file :
 		$Pickle_name.pkl
 		result_*.pkl		(file need to be gunzip)
 more information : https://github.com/clami66/dgram2dmap
 
+Generate table of residue distance :
 
+	-Use APD_calculate_residue_dist.py
+
+  	-Necessary file
+		ranked_*.pdb
