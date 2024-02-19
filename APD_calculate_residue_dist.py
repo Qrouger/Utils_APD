@@ -29,7 +29,6 @@ def calculate_residue_distances(pdb_file):
                             if atom1.get_id()=="CB" and atom2.get_id()=="CB" :
                                distance = atom1 - atom2
                                if distance <= 5 :
-                                  print(dir(residue1))
                                   result.append([residue1.get_resname()+str(residue1.get_id()[1]),residue2.get_resname()+str(residue2.get_id()[1]),str(distance)])
                                else :
                                   pass
