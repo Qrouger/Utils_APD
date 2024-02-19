@@ -272,8 +272,11 @@ def plot_distances(filepath,list_lenght , distances, pae=None, limitA=None, limi
     for index in range(len(list_lenght)-1) :
         initial_lenght += list_lenght[index]
         #if initial_leng
-        ax[0].axhline(initial_lenght, color="black", linewidth=2.5)
-        ax[0].axvline(initial_lenght, color="black", linewidth=2.5)
+        ax[0].axhline(initial_lenght, color="black", linewidth=1.5)
+        ax[0].axvline(initial_lenght, color="black", linewidth=1.5)
+        ax[1].axhline(initial_lenght, color="black", linewidth=1.5)
+        ax[1].axvline(initial_lenght, color="black", linewidth=1.5)
+
     if limitA and limitB:
         # plots a bounding box if any
         rect1, rect2 = get_bounding_boxes(limitA, limitB)
