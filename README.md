@@ -24,6 +24,6 @@ more information : https://github.com/clami66/dgram2dmap
 Generate table of residue distance :
 
 	-Use APD_calculate_residue_dist.py
-
+		python APD_calculate_residue_dist.py
   	-Necessary file
 		ranked_*.pdb
