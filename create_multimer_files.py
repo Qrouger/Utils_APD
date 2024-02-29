@@ -1,4 +1,3 @@
-import os
 print("Name of protein")
 name = input()
 print ("Numbers of homo-oligomers")
