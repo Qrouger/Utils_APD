@@ -51,12 +51,9 @@ def calculate_residue_distances(pdb_file):
     for chains in dict_int.keys() :
       for line in range(len(save_dict[chains])) :
          if dict_information[chains][line][1] not in atom_possible_contact or dict_information[chains][line][3] not in atom_possible_contact and dict_information[chains][line][0] != " " : #sort in function of atom id
-             print("wrong atom detected")
              for index in range(len(dict_int[chains])) :
                   if dict_int[chains][index-1] == save_dict[chains][line] :
-                     print("wrong atom delete")
                      dict_int[chains].pop(index-1)
-#dict_int[chains].remove(save_dict[chains][line])
     save_dict2 = copy.deepcopy(dict_int)
     for chains2 in save_dict2.keys() : #sort in function of the distance
       for line2 in range(len(save_dict2[chains2])) :
@@ -66,15 +63,12 @@ def calculate_residue_distances(pdb_file):
          for interaction in range(len(int_list)) :
             if int_list[interaction][0] == save_dict2[chains2][line2][0] and int_list[interaction][1] == save_dict2[chains2][line2][1] and float(save_dict2[chains2][line2][2]) > float(int_list[interaction][2]) :
                for index in range(len(dict_int[chains2])) :
-                  print(dict_int[chains2][index-1])
                   if dict_int[chains2][index-1] == save_dict2[chains2][line2] :
                      dict_int[chains2].pop(index-1)
-                     print("del from >")
             elif int_list[interaction][0] == save_dict2[chains2][line2][0] and int_list[interaction][1] == save_dict2[chains2][line2][1] and float(save_dict2[chains2][line2][2]) < float(int_list[interaction][2]) :
                for index in range(1,len(dict_int[chains2])) :
                   if dict_int[chains2][index-1] == int_list[interaction] :
                      dict_int[chains2].pop(index-1)
-                     print("del from <")
             else :
                 pass
       fileout = chains2+"_res_int.csv"
