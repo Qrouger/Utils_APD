@@ -29,7 +29,7 @@ with open(file, 'rb') as handle :
             i2 += 1
             if proteins != proteins2 and i1 < i2 :
                 adition = dict_prot[proteins]+ dict_prot[proteins2]
-                if adition <= 1000 :
+                if adition <= 2000 :
                    list_int.append([proteins,proteins2])
                 else :
                    ban_list.append([proteins,proteins2])
