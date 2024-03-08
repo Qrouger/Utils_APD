@@ -30,3 +30,5 @@ Generate table of residue distance :
   
   	-Necessary file :
 		ranked_*.pdb
+
+Allows to have the fundamental information present on the Distogram. A table of atoms distances.
