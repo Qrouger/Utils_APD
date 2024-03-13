@@ -1,15 +1,18 @@
 Generate MSA-plot :
 
-Usable only on one proteins alignement (comming soon). This script can be used only after done a mono-holigomer of the protéins.
-	
  	-Use APD_plot_prediction_quality.py
 		python APD_plot_prediction_quality.py
 
 	-Necessary file :
-		$Pickle_name.pkl
-		#result_model_{num}_multimer_v3_pred_0.pkl for multimer
-		result_model_ptm_pred_{num}.pkl
-		ranking_debug.json
+                If you have done mono-oligomer protéins : (Coverage, PAE and Plddt)
+			$Pickle_name.pkl		
+   			result_model_ptm_pred_{num}.pkl
+   			ranking_debug.json
+      
+		If you have done only multi-oligomer protéins : (Coverage)
+  			$Pickle_name.pkl		
+			result_model_{num}_multimer_v3_pred_0.pkl 
+
 more information about the script : https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
 
 
