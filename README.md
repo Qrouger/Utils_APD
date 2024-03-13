@@ -1,7 +1,8 @@
 Generate MSA-plot :
 
 Usable only on one proteins alignement (comming soon). This script can be used only after done a mono-holigomer of the protéins.
-	-Use APD_plot_prediction_quality.py
+	
+ 	-Use APD_plot_prediction_quality.py
 		python APD_plot_prediction_quality.py
 
 	-Necessary file :
