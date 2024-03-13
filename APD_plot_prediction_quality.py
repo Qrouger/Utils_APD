@@ -28,13 +28,13 @@ for r in repo:
     feature_dict = pre_feature_dict.feature_dict
     #feature_dict = pickle.load(open(f'{args.input_dir}/features.pkl','rb'))
  
-    is_multimer = ('result_model_1_multimer_v2_pred_0.pkl' in [os.path.basename(f) for f in os.listdir(path=args.input_dir)])
+    is_multimer = ('result_model_1_multimer_v3_pred_0.pkl' in [os.path.basename(f) for f in os.listdir(path=args.input_dir)])
  
     if is_multimer==False:
-        model_dicts = [pickle.load(open(f'{args.input_dir}/result_model_{f}{"_multimer_v2" if is_multimer else ""}{"_ptm" if is_multimer==False else ""}_pred_0.pkl','rb'))
+        model_dicts = [pickle.load(open(f'{args.input_dir}/result_model_{f}{"_multimer_v3" if is_multimer else ""}{"_ptm" if is_multimer==False else ""}_pred_0.pkl','rb'))
                        for f in range(1,6)]
     else:
-        model_dicts = [pickle.load(open(f'{args.input_dir}/result_model_{f}{"_multimer_v2" if is_multimer else ""}{"_ptm" if is_multimer==False else ""}_pred_{g}.pkl','rb')) 
+        model_dicts = [pickle.load(open(f'{args.input_dir}/result_model_{f}{"_multimer_v3" if is_multimer else ""}{"_ptm" if is_multimer==False else ""}_pred_0.pkl','rb')) 
                        for f in range(1,6) for g in range(5)]
         
 def get_pae_plddt(model_dicts):
