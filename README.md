@@ -5,7 +5,7 @@ Generate MSA-plot :
 
 	-Necessary file :
 		$Pickle_name.pkl
-		result_model_multimer_v2_pred_{num}.pkl for multimer
+		result_model_{num}_multimer_v3_pred_0.pkl for multimer
 		result_model_ptm_pred_{num}.pkl
 		ranking_debug.json
 more information about the script : https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
