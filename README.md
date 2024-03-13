@@ -1,6 +1,6 @@
 Generate MSA-plot :
 
-Usable only on one proteins alignement (comming soon)
+Usable only on one proteins alignement (comming soon). This script can be used only after done a mono-holigomer of the protéins.
 	-Use APD_plot_prediction_quality.py
 		python APD_plot_prediction_quality.py
 
@@ -10,7 +10,7 @@ Usable only on one proteins alignement (comming soon)
 		result_model_ptm_pred_{num}.pkl
 		ranking_debug.json
 more information about the script : https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
-This script can be used only after done a mono-holigomer of the protéins
+
 
 
 Generate Distogram :
