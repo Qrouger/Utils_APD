@@ -15,7 +15,7 @@ This script can be used only after done a mono-holigomer of the protéins
 Generate Distogram :
 
 	-Use APD_plot_distogram.py
-		python plot_distogram.py $Path --pickle_name $Pickle_name --plot
+		python APD_plot_distogram.py $Path --pickle_name $Pickle_name --plot
 	
 	
 	-Necessary file :
