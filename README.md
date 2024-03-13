@@ -1,11 +1,12 @@
 Generate MSA-plot :
-  
+
+Usable only on one proteins alignement (comming soon)
 	-Use APD_plot_prediction_quality.py
 		python APD_plot_prediction_quality.py
 
 	-Necessary file :
 		$Pickle_name.pkl
-		result_model_{num}_multimer_v3_pred_0.pkl for multimer
+		#result_model_{num}_multimer_v3_pred_0.pkl for multimer
 		result_model_ptm_pred_{num}.pkl
 		ranking_debug.json
 more information about the script : https://blog.biostrand.ai/explained-how-to-plot-the-prediction-quality-metrics-with-alphafold2
