@@ -4,7 +4,7 @@ Generate MSA-plot :
 		python APD_plot_prediction_quality.py
 
 	-Necessary file :
-                If you have done mono-oligomer protéins : (Coverage, PAE and Plddt)
+ 		If you have done mono-oligomer protéins : (Coverage, PAE and Plddt)
 			$Pickle_name.pkl		
    			result_model_ptm_pred_{num}.pkl
    			ranking_debug.json
