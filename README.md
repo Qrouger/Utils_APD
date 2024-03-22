@@ -42,4 +42,4 @@ AlphaPulldown use GPU memory in function of the lenght of oligomer. All GPU have
 So this script allow to write a custom file only with possible interaction, just like a all_vs_all.
 Here the maximum length is set on 2000 amino-acid for an RTX 3090 ti.
 
-	-Use APD_
+	-Use APD_select_small
