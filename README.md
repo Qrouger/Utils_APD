@@ -37,3 +37,9 @@ Generate table of residue distance :
 		ranked_*.pdb
 
 Allows to have the fundamental information present on the Distogram. A table of atoms distances.
+
+AlphaPulldown use GPU memory in function of the lenght of oligomer. All GPU have a memory maximum and lot of oligomer with too big size. 
+So this script allow to write a custom file only with possible interaction, just like a all_vs_all.
+Here the maximum length is set on 2000 amino-acid for an RTX 3090 ti.
+
+	-Use APD_
