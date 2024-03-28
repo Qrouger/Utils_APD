@@ -11,7 +11,7 @@ def create_multimer_file(fasta_file) :
                line = line.strip().split()
 	       if len(line) > 0 :
                   if line[0][0] != ">" :
-                     lenght += len(line)
+                     lenght += len(line[0])
         num_multimer = 2000//lenght
         if num_multimer > 15 :
            num_multimer = 15
