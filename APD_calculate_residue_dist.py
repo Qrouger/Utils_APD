@@ -81,3 +81,50 @@ def calculate_residue_distances(pdb_file):
 if __name__ =="__main__" :
 
 	calculate_residue_distances(pdb_file)
+	
+### Last release
+parser = PDB.PDBParser(QUIET=True)
+        structure = parser.get_structure('protein', path_int + "/ranked_0.pdb")
+        dict_int = dict()
+        int_already_know = dict()
+        proteins = path_int.split('/')[2].split('_and_')
+        for model in structure:
+            list_chain = model.get_list()
+            for index1 in range(0,len(list_chain)) :
+                chain1 = list_chain[index1] #B and C
+                for residue1 in chain1 : #number of residue (len of the chain)
+                    for atom1 in residue1 : #type of the atom
+                        if atom1.get_id() == "CA" :
+                            for index2 in range(index1+1,len(list_chain)) :
+                                chain2 = list_chain[index2]
+                                for residue2 in chain2 :
+                                    for atom2 in residue2 :
+                                        if atom2.get_id() == "CA" :
+                                            distance = atom1 - atom2
+                                            if distance <= 6 : #filtered on pLDDT and distance, be stringent to avoid false residue interaction (or maybe use PAE ?)
+                                                res_int = chain1.get_id()+":"+residue1.get_resname()+" "+str(residue1.get_id()[1])," "+chain2.get_id()+":"+residue2.get_resname()+" "+str(residue2.get_id()[1])
+                                                print(res_int)
+                                                if chain1.get_id()+chain2.get_id() in dict_int.keys() : #to make different table for different interaction
+                                                    if res_int in int_already_know.keys() and int_already_know[res_int] > str(distance) :
+                                                        dict_int[chain1.get_id()+chain2.get_id()].remove([res_int[0],res_int[1]," "+str(int_already_know[res_int])])
+                                                        dict_int[chain1.get_id()+chain2.get_id()].append([res_int[0],res_int[1]," "+str(distance)])
+                                                        int_already_know[res_int] = str(distance)
+                                                    elif res_int in int_already_know.keys() and int_already_know[res_int] < str(distance) : #skip double interaction with differents atoms
+                                                        pass
+                                                    else :
+                                                        dict_int[chain1.get_id()+chain2.get_id()].append([res_int[0],res_int[1]," "+str(distance)])
+                                                        int_already_know[res_int] = str(distance)
+                                                else :
+                                                    dict_int[chain1.get_id()+chain2.get_id()] = [[proteins[0]," "+proteins[1]," Distance Ä"]]
+                                                    dict_int[chain1.get_id()+chain2.get_id()].append([res_int[0],res_int[1]," "+str(distance)])
+                                                    int_already_know[res_int] = str(distance)
+                                            else :
+                                                pass
+        for chains in dict_int.keys() :
+            file.define_interface(dict_int[chains],proteins)
+            fileout = chains+"_res_int.csv"
+            np_table = np.array(dict_int[chains])
+            with open(f"{path_int}/"+fileout, "w", newline="") as file :
+                mywriter = csv.writer(file, delimiter=",")
+                mywriter.writerows(np_table)
+            #print("Write table")
