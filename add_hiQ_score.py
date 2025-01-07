@@ -1,5 +1,4 @@
-    dir_alpha =
-    cmd4 = f"singularity exec --no-home --bind result_homo_oligo:/mnt {dir_alpha}/alpha-analysis_jax_0.4.sif run_get_good_pae.sh --output_dir=/mnt --cutoff=10"
+    cmd4 = f"singularity exec --no-home --bind result_homo_oligo:/mnt /home/emmanuel/Downloads/alpha-analysis_jax_0.4.sif run_get_good_pae.sh --output_dir=/mnt --cutoff=10"
     os.system(cmd4)
     with open("predictions_with_good_interpae.csv", "r") as file1 :
         reader = csv.DictReader(file1)
