@@ -1,6 +1,8 @@
-    cmd4 = f"singularity exec --no-home --bind result_homo_oligo:/mnt /home/emmanuel/Downloads/alpha-analysis_jax_0.4.sif run_get_good_pae.sh --output_dir=/mnt --cutoff=10"
-    os.system(cmd4)
-    with open("predictions_with_good_interpae.csv", "r") as file1 :
+import os
+import csv
+cmd4 = f"singularity exec --no-home --bind .:/mnt /home/emmanuel/Downloads/alpha-analysis_jax_0.4.sif run_get_good_pae.sh --output_dir=/mnt --cutoff=10"
+os.system(cmd4)
+with open("predictions_with_good_interpae.csv", "r") as file1 :
         reader = csv.DictReader(file1)
         all_lines = "jobs,pi_score,iptm_ptm,hiQ_score\n"
         all_homo = dict()
@@ -18,5 +20,5 @@
             hiQ_score = (((float(all_homo[key][0])/all_homo[key][1])+2.63)/5.26)*60+float(row['iptm_ptm'])*40 #cause iptm_ptm is always same for each homo of same protein
             line = key+","+str(all_homo[key][0])+","+row['iptm_ptm']+","+str(hiQ_score)+"\n"
             all_lines = all_lines + line
-    with open("predictions_with_good_interpae.csv", "w") as file2 :
-        file2.write(all_lines)
+with open("predictions_with_good_interpae.csv", "w") as file2 :
+      file2.write(all_lines)
